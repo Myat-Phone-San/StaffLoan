@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>HOD Approval Form</title>
+
+<style>
+
+:root{
+    --primary:#0056b3;
+    --secondary:#f4f7f6;
+    --border:#d9d9d9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Pyidaungsu','Segoe UI',sans-serif;
+    background:var(--secondary);
+    padding:20px;
+}
+
+.container{
+    max-width:1500px;
+    margin:auto;
+    background:#fff;
+    border-radius:10px;
+    padding:30px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.page-title{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:25px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--primary);
+}
+
+.content-wrapper{
+    display:flex;
+    gap:25px;
+}
+
+/* LEFT + RIGHT */
+
+.section{
+    flex:1;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px;
+    background:#fff;
+}
+
+.section-title{
+    color:var(--primary);
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:1px solid #ddd;
+}
+
+.form-group{
+    display:flex;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.form-label{
+    flex:0 0 35%;
+    font-weight:bold;
+    color:#333;
+}
+
+.readonly-value{
+    flex:0 0 65%;
+    background:#f8f9fa;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:10px;
+    min-height:42px;
+    display:flex;
+    align-items:center;
+}
+
+.form-control-wrapper{
+    flex:0 0 65%;
+}
+
+.form-input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+textarea.form-input{
+    resize:vertical;
+}
+
+.form-input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+.sub-section-title{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:var(--primary);
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.radio-group{
+    flex:0 0 65%;
+    display:flex;
+    gap:25px;
+}
+
+.declaration-box{
+    margin-top:20px;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    background:#fafafa;
+}
+
+.declaration-title{
+    font-weight:bold;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.declaration-box ul{
+    padding-left:20px;
+    line-height:1.8;
+}
+
+.submit-btn{
+    margin-top:20px;
+    width:100%;
+    background:var(--primary);
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#004187;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .content-wrapper{
+        flex-direction:column;
+    }
+
+    .form-group{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .form-label{
+        width:100%;
+        margin-bottom:5px;
+    }
+
+    .readonly-value,
+    .form-control-wrapper{
+        width:100%;
+        flex:0 0 100%;
+    }
+
+    .radio-group{
+        width:100%;
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2 class="page-title">
+        Head of Department (HOD) Approval Form
+    </h2>
+
+    <div class="content-wrapper">
+
+        <!-- LEFT PANEL -->
+
+        <div class="section">
+
+            <h3 class="section-title">
+                Staff Details Information
+            </h3>
+
+            <div class="form-group">
+                <div class="form-label">ဝန်ထမ်း ID အမှတ်</div>
+                <div class="readonly-value">CB-1006</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">အမည်</div>
+                <div class="readonly-value">Ei Ei Maw</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ရာထူး</div>
+                <div class="readonly-value">Assistant Manager</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">မှတ်ပုံတင်အမှတ်</div>
+                <div class="readonly-value">၅/စကန(နိုင်)၂၂၇၇၈၃</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">စုစုပေါင်းလစာ</div>
+                <div class="readonly-value">620,000 MMK</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Department / Division</div>
+                <div class="readonly-value">Risk Management Division</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ချေးငွေအမျိုးအစား</div>
+                <div class="readonly-value">ဝန်ထမ်းချေးငွေ</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">အဖအမည်</div>
+                <div class="readonly-value">U Hla</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">အဖ မှတ်ပုံတင်အမှတ်</div>
+                <div class="readonly-value">၅/စကန(နိုင်)၂၁၁၁၁၁</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ချေးလိုသောငွေပမာဏ</div>
+                <div class="readonly-value">1,240,000 MMK</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">လစာဝင်ငွေအဆ</div>
+                <div class="readonly-value">2 ဆ</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">CB BANK Account No.</div>
+                <div class="readonly-value">001060050043223</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">အမြဲတမ်းနေရပ်လိပ်စာ</div>
+                <div class="readonly-value">
+                    No.123, Kamayut Township, Yangon
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ဖုန်းနံပါတ်</div>
+                <div class="readonly-value">09-123456789</div>
+            </div>
+
+            <h3 class="sub-section-title">
+                Guarantor Details Information
+            </h3>
+
+            <div class="form-group">
+                <div class="form-label">အာမခံသူဝန်ထမ်း ID</div>
+                <div class="readonly-value">CB-2001</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">အမည်</div>
+                <div class="readonly-value">Mg Mg</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ရာထူး</div>
+                <div class="readonly-value">Officer</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">မှတ်ပုံတင်အမှတ်</div>
+                <div class="readonly-value">12/ABC(N)123456</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ဖခင်အမည်</div>
+                <div class="readonly-value">U Ba</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">ဌာန / ဘဏ်ခွဲ</div>
+                <div class="readonly-value">HR Division</div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-label">Approval Status</div>
+                <div class="readonly-value">✅ Approved</div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+
+        <div class="section">
+
+            <h3 class="section-title">
+                HOD Details Information
+            </h3>
+
+            <form id="hodForm">
+
+                <div class="form-group">
+                    <label class="form-label">
+                        HOD အမည်
+                    </label>
+
+                    <div class="form-control-wrapper">
+                        <input
+                            type="text"
+                            id="hodName"
+                            class="form-input"
+                            required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        HOD ရာထူး
+                    </label>
+
+                    <div class="form-control-wrapper">
+                        <select
+                            id="hodPosition"
+                            class="form-input"
+                            required>
+
+                            <option value="">
+                                -- ရွေးချယ်ပါ --
+                            </option>
+
+                            <option>Manager</option>
+                            <option>Senior Manager</option>
+                            <option>Deputy General Manager</option>
+                            <option>General Manager</option>
+                            <option>Head of Department</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Department
+                    </label>
+
+                    <div class="form-control-wrapper">
+                        <select
+                            id="hodDepartment"
+                            class="form-input"
+                            required>
+
+                            <option value="">
+                                -- Department ရွေးချယ်ပါ --
+                            </option>
+
+                            <option>HR Division</option>
+                            <option>Risk Management Division</option>
+                            <option>IT Division</option>
+                            <option>Operations Division</option>
+                            <option>Finance Division</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        မှတ်ချက်
+                    </label>
+
+                    <div class="form-control-wrapper">
+                        <textarea
+                            id="remarks"
+                            class="form-input"
+                            rows="6"
+                            required></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">
+                        Approval Status
+                    </label>
+
+                    <div class="radio-group">
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="decision"
+                                value="Approve"
+                                required>
+                            ✅ Approve
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="decision"
+                                value="Reject">
+                            ❌ Reject
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="declaration-box">
+
+                    <div class="declaration-title">
+                        HOD Confirmation
+                    </div>
+
+                    <ul>
+                        <li>အထက်ပါ ဝန်ခံကတိပြုချက်များ၊ ချေးငွေပြန်လည်ပေးဆပ်ရန် တာဝန်ယူမှုနှင့် အာမခံမှုတို့ကို ကျွန်ုပ်၏ ရှေ့မှောက်တွင် တာဝန်ယူလက်မှတ်ရေးထိုးခြင်း ဖြစ်ပါကြောင်း သက်သေခံပါသည်။ ဝန်ထမ်းချေးငွေအတွက် လိုအပ်သလို ဆက်လက်ဆောင်ရွက်နိုင်ပါရန် စိစစ်ထောက်ခံအပ်ပါသည်။</li>
+                        
+                    </ul>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="submit-btn">
+                    Submit
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+document
+.getElementById("hodForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const hodName =
+        document.getElementById("hodName").value;
+
+    const decision =
+        document.querySelector(
+            'input[name="decision"]:checked'
+        ).value;
+
+    alert(
+`HOD Approval Submitted Successfully
+
+HOD Name : ${hodName}
+Decision : ${decision}`
+    );
+
+});
+
+</script>
+
+</body>
+</html>

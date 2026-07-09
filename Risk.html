@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Risk Management Approval Form</title>
+
+<style>
+
+:root{
+    --primary:#0056b3;
+    --secondary:#f4f7f6;
+    --border:#d9d9d9;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Pyidaungsu','Segoe UI',sans-serif;
+    background:var(--secondary);
+    padding:20px;
+}
+
+.container{
+    max-width:1800px;
+    margin:auto;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+.page-title{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:25px;
+    padding-bottom:10px;
+    border-bottom:2px solid var(--primary);
+}
+
+.content-wrapper{
+    display:flex;
+    gap:25px;
+}
+
+.section{
+    flex:1;
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:20px;
+    background:#fff;
+}
+
+.section-title{
+    color:var(--primary);
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+    margin-bottom:20px;
+}
+
+.sub-section-title{
+    color:var(--primary);
+    margin-top:25px;
+    margin-bottom:15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+}
+
+.form-group{
+    display:flex;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+.form-label{
+    flex:0 0 35%;
+    font-weight:bold;
+}
+
+.readonly-value{
+    flex:0 0 65%;
+    background:#f8f9fa;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:10px;
+}
+
+.form-control-wrapper{
+    flex:0 0 65%;
+}
+
+.form-input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.form-input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+textarea.form-input{
+    resize:vertical;
+}
+
+.radio-group{
+    flex:0 0 65%;
+    display:flex;
+    gap:25px;
+}
+
+.declaration-box{
+    margin-top:20px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    background:#fafafa;
+    padding:15px;
+}
+
+.declaration-title{
+    font-weight:bold;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.declaration-box ul{
+    padding-left:20px;
+    line-height:1.8;
+}
+
+.submit-btn{
+    width:100%;
+    margin-top:20px;
+    border:none;
+    background:var(--primary);
+    color:white;
+    padding:12px;
+    border-radius:5px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#00428a;
+}
+
+@media(max-width:992px){
+
+    .content-wrapper{
+        flex-direction:column;
+    }
+
+    .form-group{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .form-label{
+        width:100%;
+        margin-bottom:5px;
+    }
+
+    .readonly-value,
+    .form-control-wrapper{
+        width:100%;
+        flex:0 0 100%;
+    }
+
+    .radio-group{
+        width:100%;
+        flex-direction:column;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 class="page-title">
+Risk Management Approval Form
+</h2>
+
+<div class="content-wrapper">
+
+<!-- LEFT SIDE -->
+
+<div class="section">
+
+<h3 class="section-title">
+Staff Details Information
+</h3>
+
+<div class="form-group">
+<div class="form-label">ဝန်ထမ်း ID အမှတ်</div>
+<div class="readonly-value">CB-1006</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">အမည်</div>
+<div class="readonly-value">Ei Ei Maw</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">ရာထူး</div>
+<div class="readonly-value">Assistant Manager</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">မှတ်ပုံတင်အမှတ်</div>
+<div class="readonly-value">၅/စကန(နိုင်)၂၂၇၇၈၃</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">စုစုပေါင်းလစာ</div>
+<div class="readonly-value">620,000 MMK</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">Department / Division</div>
+<div class="readonly-value">Risk Management Division</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">ချေးငွေအမျိုးအစား</div>
+<div class="readonly-value">ဝန်ထမ်းချေးငွေ</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">အဖအမည်</div>
+<div class="readonly-value">U Hla</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">ချေးလိုသောငွေပမာဏ</div>
+<div class="readonly-value">1,240,000 MMK</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">လစာဝင်ငွေအဆ</div>
+<div class="readonly-value">2 ဆ</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">CB BANK Account No.</div>
+<div class="readonly-value">001060050043223</div>
+</div>
+
+<h3 class="sub-section-title">
+Guarantor Details Information
+</h3>
+
+<div class="form-group">
+<div class="form-label">Guarantor ID</div>
+<div class="readonly-value">CB-2001</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">အမည်</div>
+<div class="readonly-value">Mg Mg</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">ရာထူး</div>
+<div class="readonly-value">Officer</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">Approval Status</div>
+<div class="readonly-value">✅ Approved</div>
+</div>
+
+<h3 class="sub-section-title">
+HOD Approval Information
+</h3>
+
+<div class="form-group">
+<div class="form-label">HOD အမည်</div>
+<div class="readonly-value">U Aung Aung</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">Department</div>
+<div class="readonly-value">Risk Management Division</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">Approval Status</div>
+<div class="readonly-value">✅ Approved</div>
+</div>
+
+<h3 class="sub-section-title">
+HR Approval Information
+</h3>
+
+<div class="form-group">
+<div class="form-label">HR အမည်</div>
+<div class="readonly-value">Daw Su Su Win</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">HR Department</div>
+<div class="readonly-value">Human Resources Division</div>
+</div>
+
+<div class="form-group">
+<div class="form-label">Approval Status</div>
+<div class="readonly-value">✅ Approved</div>
+</div>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="section">
+
+<h3 class="section-title">
+Risk Management Information
+</h3>
+
+<form id="riskForm">
+
+<div class="form-group">
+<label class="form-label">Staff Loan Record</label>
+<div class="form-control-wrapper">
+<input type="text"
+id="staffLoanRecord"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+အထွေထွေမန်နေဂျာအမည်
+</label>
+<div class="form-control-wrapper">
+<input type="text"
+id="gmName"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+ခွင့်ပြုသည့်ချေးငွေစာရင်းအမှတ်
+</label>
+<div class="form-control-wrapper">
+<input type="text"
+id="loanRecordNo"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+ခွင့်ပြုသည့်ချေးငွေ ID
+</label>
+<div class="form-control-wrapper">
+<input type="text"
+id="loanId"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+ချေးငွေ LD အမှတ်
+</label>
+<div class="form-control-wrapper">
+<input type="text"
+id="loanLdNo"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+ခွင့်ပြုသည့်ချေးငွေပမာဏ
+</label>
+<div class="form-control-wrapper">
+<input type="number"
+id="approvedAmount"
+class="form-input"
+required>
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+Risk Management Decision
+</label>
+
+<div class="radio-group">
+
+<label>
+<input type="radio"
+name="riskDecision"
+value="Approve"
+required>
+✅ Approve
+</label>
+
+<label>
+<input type="radio"
+name="riskDecision"
+value="Reject">
+❌ Reject
+</label>
+
+</div>
+</div>
+
+<div class="form-group">
+<label class="form-label">
+Risk Management Remark
+</label>
+
+<div class="form-control-wrapper">
+<textarea
+id="riskRemark"
+class="form-input"
+rows="6"
+required></textarea>
+</div>
+</div>
+
+<div class="declaration-box">
+
+<div class="declaration-title">
+Risk Management Confirmation
+</div>
+
+<ul>
+<li>Staff Information ကို စစ်ဆေးပြီးဖြစ်ပါသည်။</li>
+<li>Guarantor Information ကို စစ်ဆေးပြီးဖြစ်ပါသည်။</li>
+<li>HOD Approval Information ကို စစ်ဆေးပြီးဖြစ်ပါသည်။</li>
+<li>HR Approval Information ကို စစ်ဆေးပြီးဖြစ်ပါသည်။</li>
+<li>Risk Assessment ပြုလုပ်ပြီးဖြစ်ပါသည်။</li>
+</ul>
+
+</div>
+
+<button
+type="submit"
+class="submit-btn">
+Submit Risk Approval
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+document
+.getElementById("riskForm")
+.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+const staffLoanRecord =
+document.getElementById("staffLoanRecord").value;
+
+const loanId =
+document.getElementById("loanId").value;
+
+const approvedAmount =
+document.getElementById("approvedAmount").value;
+
+const decision =
+document.querySelector(
+'input[name="riskDecision"]:checked'
+).value;
+
+alert(
+`Risk Management Approval Submitted Successfully
+
+Staff Loan Record : ${staffLoanRecord}
+
+Loan ID : ${loanId}
+
+Approved Amount : ${approvedAmount}
+
+Decision : ${decision}`
+);
+
+});
+
+</script>
+
+</body>
+</html>
